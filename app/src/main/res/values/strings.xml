@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BusinessCard</string>
+    <string name="user_name">Сергей Степанов</string>
+    <string name="occupation">Студент группы 4410</string>
+    <string name="phone" >+7 (952) 812 00 27</string>
+    <string name="info">@nopy4ik</string>
+    <string name="email">T43ik@ya.ru</string>
+</resources>
