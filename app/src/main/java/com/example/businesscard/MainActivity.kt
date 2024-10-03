@@ -81,20 +81,47 @@ fun Intro(name: Int, occupation: Int, modifier: Modifier = Modifier){
     }
 }
 @Composable
-fun ContactDetails(phone: Int, info: Int, email: Int, modifier: Modifier = Modifier){
-    Text(
-        text = stringResource(phone),
-        modifier = modifier
-    )
-    Text(
-        text = stringResource(info),
-        modifier = modifier
-    )
-    Text(
-        text = stringResource(email),
-        modifier = modifier
-    )
+fun ContactDetails(phone: Int, info: Int, email: Int, modifier: Modifier = Modifier) {
+    Column(
+        verticalArrangement = Arrangement.spacedBy(10.dp),
+        modifier = modifier.padding(16.dp)
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Image(
+                painter = painterResource(R.drawable.ic_phone),
+                contentDescription = "Phone Icon",
+                modifier = Modifier.size(24.dp)
+            )
+            Text(
+                text = stringResource(phone),
+                modifier = Modifier.padding(start = 8.dp) // Расстояние между иконкой и текстом
+            )
+        }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Image(
+                painter = painterResource(R.drawable.ic_info),
+                contentDescription = "Info Icon",
+                modifier = Modifier.size(24.dp)
+            )
+            Text(
+                text = stringResource(info),
+                modifier = Modifier.padding(start = 8.dp)
+            )
+        }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Image(
+                painter = painterResource(R.drawable.ic_email),
+                contentDescription = "Email Icon",
+                modifier = Modifier.size(24.dp)
+            )
+            Text(
+                text = stringResource(email),
+                modifier = Modifier.padding(start = 8.dp)
+            )
+        }
+    }
 }
+
 @Composable
 fun BusinessCard( modifier: Modifier = Modifier) {
 
@@ -120,7 +147,7 @@ fun BusinessCard( modifier: Modifier = Modifier) {
         }
         Column (
             modifier = Modifier
-                .fillMaxHeight(0.3f)
+                .fillMaxHeight(0.5f)
                 .padding(start = 10.dp)
                 .padding(top = 20.dp)
         ){
